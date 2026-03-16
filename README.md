@@ -34,7 +34,7 @@ Full project report and methodology
 ![Histogram](Report/Figures/fig1_hist_injuries.png)
 
 ### Sampling Distribution of Night Coefficient
-![Monte Carlo](Figures/fig6_sampling_night.png)
+![Monte Carlo](Report/Figures/fig6_sampling_night.png)
 
 ## Author
 Quincy Cornish
