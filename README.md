@@ -29,5 +29,6 @@ report/
 Full project report and methodology
 
 ## Author
+Quincy Cornish
 
 Statistics project from coursework analyzing crash severity using regression and simulation methods.
