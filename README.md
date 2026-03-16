@@ -31,7 +31,7 @@ Full project report and methodology
 ## Example Results
 
 ### Distribution of Crash Injuries
-![Histogram](Reports/Figures/fig1_hist_injuries.png)
+![Histogram](Report/Figures/fig1_hist_injuries.png)
 
 ### Sampling Distribution of Night Coefficient
 ![Monte Carlo](Figures/fig6_sampling_night.png)
