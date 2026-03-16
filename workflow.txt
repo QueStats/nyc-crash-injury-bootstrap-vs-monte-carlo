@@ -1,0 +1,33 @@
+# This is the workflow to reproduce the results of the ST 453 midterm project by
+# Quincy Cornish
+
+The raw data file must be located at:
+#       ~/Downloads/Motor_Vehicle_Collisions_-_Crashes.csv
+
+# ---- Step 1: Generate results for each seed ---------------------------------\
+for seed in {1..1}
+do
+    Rscript run_file.r $seed
+done
+
+# ---- Step 2: Produce all figures and tables ---------------------------------
+
+Rscript out_file.r 1
+
+# ---- Step 3: Compile the report (LaTeX / R Markdown) -----------------------
+# After running steps 1 and 2, the following output directories will exist:
+#   results/run_results_1.rds   – saved R workspace
+#   figures/fig1_hist_injuries.png
+#   figures/fig2_boxplot_night.png
+#   figures/fig3_boxplot_borough.png
+#   figures/fig4_boxplot_multivehicle.png
+#   figures/fig5_obs_vs_pred.png
+#   figures/fig6_sampling_night.png
+#   figures/fig7_sampling_multivehicle.png
+#   figures/fig8_rmse_distribution.png
+#   figures/fig9_true_vs_mean_coefs.png
+#   figures/figA_eda_panel.png
+#   tables/table1_data_description.csv
+#   tables/table2_coefficients.csv
+#   tables/table3_inference.csv
+#   tables/table4_simulation_summary.csv
