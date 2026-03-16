@@ -1,9 +1,9 @@
 # =============================================================================
 # out_file.R
-# Purpose: Load run_file.r output and produce ALL figures and tables
+# Purpose: Load run_file.R output and produce ALL figures and tables
 #          in the exact order they appear in the 10-page write-up.
-# Usage:   Rscript out_file.r <seed>
-#          e.g.  Rscript out_file.r 1
+# Usage:   Rscript out_file.R <seed>
+#          e.g.  Rscript out_file.R 1
 # Output:  figures/  (PNG files for each figure)
 #          tables/   (CSV files for each table)
 # =============================================================================
