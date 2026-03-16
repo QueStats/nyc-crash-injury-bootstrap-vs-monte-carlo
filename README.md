@@ -25,8 +25,16 @@ Analysis sample: 19,999 crashes with 15 predictors.
 R/  
 Scripts used for model estimation and simulation
 
-report/  
+Report/  
 Full project report and methodology
+
+## Example Results
+
+### Distribution of Crash Injuries
+![Histogram](Figures/fig1_hist_injuries.png)
+
+### Sampling Distribution of Night Coefficient
+![Monte Carlo](Figures/fig6_sampling_night.png)
 
 ## Author
 Quincy Cornish
