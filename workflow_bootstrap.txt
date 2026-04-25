@@ -1,0 +1,36 @@
+# This is the workflow to reproduce the results of the ST 453 final project by
+# Quincy Cornish.
+
+# The raw data file must be located at:
+# ~/Downloads/Motor_Vehicle_Collisions_-_Crashes.csv
+
+# Step 1: Run the bootstrap study.
+# The first argument is the random number seed.
+# The second argument is the number of bootstrap samples.
+
+for seed in {1..1}
+do
+    Rscript bootstrap.r $seed 1000
+done
+
+# Step 2: Produce all figures and tables from the saved bootstrap output.
+
+Rscript out_file.r 1
+
+# Step 3: Compile the report after the figures and tables are created.
+# The output directories should contain:
+# results/bootstrap_results_1.rds
+# figures/fig1_hist_injuries.png
+# figures/fig2_boxplot_night.png
+# figures/fig3_boxplot_borough.png
+# figures/fig4_boxplot_multivehicle.png
+# figures/fig5_observed_vs_predicted.png
+# figures/fig6_bootstrap_night.png
+# figures/fig7_bootstrap_multivehicle.png
+# figures/fig8_bootstrap_failure_to_yield.png
+# figures/fig9_parametric_vs_bootstrap_se.png
+# figures/fig10_bootstrap_rmse.png
+# tables/table1_data_description.csv
+# tables/table2_real_data_coefficients.csv
+# tables/table3_parametric_inference.csv
+# tables/table4_bootstrap_inference.csv
