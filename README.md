@@ -24,7 +24,7 @@ The same dataset, model, and predictors are used throughout, enabling a direct a
 
 **Predictors include:** night indicator, multi-vehicle indicator, borough indicators, contributing factor indicators, vehicle type indicators.
 
-![Distribution of Injury Counts](figures/fig1_hist_injuries.png)
+![Distribution of Injury Counts](Report_bootstrap/figures/fig1_hist_injuries.png)
 
 *Figure 1: Distribution of injury counts in the analysis sample. The outcome is heavily zero-inflated, motivating careful inference.*
 
@@ -42,7 +42,7 @@ Y = Xβ + U
 - No external R packages used
 - Designed for interpretability over predictive fit
 
-![Observed vs Predicted](figures/fig5_observed_vs_predicted.png)
+![Observed vs Predicted](Report_bootstrap/figures/fig5_observed_vs_predicted.png)
 
 *Figure 5: Observed vs. predicted injury counts. The model captures the conditional mean structure despite the count nature of the response.*
 
@@ -93,7 +93,7 @@ The low R² reflects high outcome variability and omitted variables — not a fa
 
 **Interpretation:** Nighttime crashes are associated with a statistically significant increase in expected injuries of approximately 0.082 persons per crash, holding all other factors constant.
 
-![Bootstrap Distribution — Night Coefficient](figures/fig6_bootstrap_night.png)
+![Bootstrap Distribution — Night Coefficient](Report_bootstrap/figures/fig6_bootstrap_night.png)
 
 *Figure 6: Empirical bootstrap sampling distribution of the Night coefficient (N = 10,000 replications). The distribution is approximately normal and tightly centered on the OLS estimate.*
 
@@ -107,11 +107,11 @@ The low R² reflects high outcome variability and omitted variables — not a fa
 | FailureToYield | +0.2576 | Higher injury severity |
 | Motorcycle | +0.3256 | Higher injury severity |
 
-![Bootstrap Distribution — MultiVehicle Coefficient](figures/fig7_bootstrap_multivehicle.png)
+![Bootstrap Distribution — MultiVehicle Coefficient](Report_bootstrap/figures/fig7_bootstrap_multivehicle.png)
 
 *Figure 7: Bootstrap sampling distribution of the MultiVehicle coefficient.*
 
-![Bootstrap Distribution — Failure to Yield Coefficient](figures/fig8_bootstrap_failure_to_yield.png)
+![Bootstrap Distribution — Failure to Yield Coefficient](Report_bootstrap/figures/fig8_bootstrap_failure_to_yield.png)
 
 *Figure 8: Bootstrap sampling distribution of the FailureToYield coefficient. The positive estimate aligns with real-world expectation — failure-to-yield crashes tend to involve higher collision speeds.*
 
@@ -119,7 +119,7 @@ The low R² reflects high outcome variability and omitted variables — not a fa
 
 ### Parametric vs. Bootstrap Comparison
 
-![Parametric vs. Bootstrap Standard Errors](figures/fig9_parametric_vs_bootstrap_se.png)
+![Parametric vs. Bootstrap Standard Errors](Report_bootstrap/figures/fig9_parametric_vs_bootstrap_se.png)
 
 *Figure 9: Side-by-side comparison of parametric and bootstrap standard errors across all coefficients. Agreement is close throughout, with only minor differences attributable to non-normality in the residuals.*
 
@@ -127,7 +127,7 @@ The low R² reflects high outcome variability and omitted variables — not a fa
 
 ### Bootstrap RMSE Distribution
 
-![Bootstrap RMSE Distribution](figures/fig10_bootstrap_rmse.png)
+![Bootstrap RMSE Distribution](Report_bootstrap/figures/fig10_bootstrap_rmse.png)
 
 *Figure 10: Distribution of bootstrap RMSE across replications, centered near σ̂ = 0.6719.*
 
